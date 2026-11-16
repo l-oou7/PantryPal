@@ -1,0 +1,8 @@
+# Render Blueprint: New > Blueprint > pick this repo, and Render creates the service.
+services:
+  - type: web
+    name: pantrypal
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    autoDeploy: true

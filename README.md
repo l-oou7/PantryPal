@@ -35,6 +35,17 @@ The same code runs on MySQL 8. Only the connection settings change. They're in `
 
 For cloud hosting (e.g. Railway), use the `mysql` profile and set `DB_URL`, `DB_USERNAME`, `DB_PASSWORD` and `PORT` as environment variables on the host.
 
+
+### Put it online (Render, free)
+
+The repo includes a `Dockerfile` and `render.yaml`, so Render can build and host it straight from GitHub:
+
+1. Sign in at https://render.com with your GitHub account.
+2. **New › Blueprint** › choose this repository › **Apply**.
+3. Wait for the first build (5 to 10 minutes). Render then shows a public `https://pantrypal-….onrender.com` link.
+
+Free-plan notes: the app sleeps after a period without visitors, so the first visit afterwards takes about a minute to wake up. It uses the built-in H2 database, which resets to the demo data whenever the service restarts or redeploys. For permanent data, connect a hosted MySQL with the `mysql` profile and the `DB_URL`, `DB_USERNAME` and `DB_PASSWORD` environment variables.
+
 On first start the app adds **37 recipes** and two demo accounts:
 
 | Email | Password | What it shows |
