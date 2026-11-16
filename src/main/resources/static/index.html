@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>PantryPal: cook with what you have, waste less</title>
+<meta name="description" content="PantryPal tracks your pantry, finds recipes you can cook with what you already have, and reminds you before food goes off.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@500;700;800&family=Pixelify+Sans:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/art.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/ui.js"></script>
+</head>
+<body class="landing">
+<header class="land-top">
+  <a class="brand" href="/index.html" id="brand"></a>
+  <div class="row">
+    <a class="btn ghost" href="#recipes">Recipes</a>
+    <a class="btn" href="/login.html" id="loginLink">Log in</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <h1>Your Kitchen, Your Little Food Adventure!</h1>
+      <p class="lead">Tell PantryPal what's in your cupboards. It shows you what you can cook right now, which ingredients need using first, and exactly what to buy for the week. Nothing more.</p>
+      <div class="row">
+        <a class="btn coral big" href="/login.html?mode=register" id="getStarted">Get Started</a>
+        <a class="btn big" href="#recipes">Explore Recipes</a>
+      </div>
+    </div>
+    <div class="hero-scene" id="heroScene" aria-hidden="true"><div class="counter-top"></div></div>
+  </section>
+
+  <section class="band mint" id="how">
+    <div class="band-inner">
+      <h2>How PantryPal works</h2>
+      <ol class="how">
+        <li><span data-food="carrot"></span><h3>Fill your pantry</h3><p>Add what you have, how much, and when it expires. Takes seconds per item.</p></li>
+        <li><span data-food="tomato"></span><h3>Get matched recipes</h3><p>Every recipe gets a match score based on your real quantities, not just ingredient names.</p></li>
+        <li><span data-food="strawberry"></span><h3>Cook, plan, shop</h3><p>Plan your week and get a shopping list that skips what you already own.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-inner">
+      <div class="feature">
+        <div class="feature-art" id="artPantry"></div>
+        <div>
+          <h2>A smart pantry that keeps count</h2>
+          <p>Sort ingredients into fruits, dairy, grains and more. Grams, kilos, litres and pieces are converted automatically, so 1 kg of flour covers a recipe that needs 250 g.</p>
+        </div>
+      </div>
+      <div class="feature flip">
+        <div class="feature-art" id="artMatch"></div>
+        <div>
+          <h2>Recipes ranked by what you own</h2>
+          <p>Have 4 of the 5 ingredients for a vegetable pasta? That's an 80% match. Missing butter? PantryPal suggests olive oil, with the right amount, if it suits the dish.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-art" id="artWaste"></div>
+        <div>
+          <h2>Use it before you lose it</h2>
+          <p>A background check scans your pantry every hour. Anything close to its date shows up under "Your Ingredients Need Some Love!", with recipes that use it.</p>
+        </div>
+      </div>
+      <div class="feature flip">
+        <div class="feature-art" id="artPlan"></div>
+        <div>
+          <h2>A week of meals, one tidy list</h2>
+          <p>Drop recipes into breakfast, lunch and dinner. The shopping list adds up every planned recipe and subtracts your stock, so you only buy what's missing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band mint" id="recipes">
+    <div class="band-inner">
+      <div class="page-head">
+        <div><h2>A peek in the recipe box</h2><p>Log in to see how well each one matches your pantry.</p></div>
+        <div class="chips" id="guestFilters" role="group" aria-label="Diet filter"></div>
+      </div>
+      <div class="rgrid" id="guestRecipes"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="band-inner">
+      <h2>Why people keep PantryPal open</h2>
+      <div class="benefits">
+        <div class="benefit"><span data-pixel="heart"></span><h3>Less waste</h3><p>Expiring food gets cooked first instead of binned.</p></div>
+        <div class="benefit"><span data-pixel="cart"></span><h3>Smaller bills</h3><p>Shopping lists skip what's already in your cupboard.</p></div>
+        <div class="benefit"><span data-pixel="clock"></span><h3>Less thinking</h3><p>"What's for dinner?" answered from your own kitchen.</p></div>
+        <div class="benefit"><span data-pixel="leaf"></span><h3>Your diet, respected</h3><p>Vegan, vegetarian or keto recipes only, plus allergy filters.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band mint cta-band">
+    <div class="band-inner" id="ctaInner">
+      <h2>Ready to open your little kitchen?</h2>
+      <a class="btn coral big" href="/login.html?mode=register">Create my pantry</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div><a class="brand" href="/index.html" id="footBrand"></a><p>Know what you have. Discover what you can cook. Waste less.</p></div>
+  <div><h4>Explore</h4><a href="#how">How it works</a><a href="#recipes">Recipes</a><a href="/login.html">Log in</a><a href="/login.html?mode=register">Sign up</a></div>
+  <div><h4>Your kitchen</h4><a href="/dashboard.html">Dashboard</a><a href="/pantry.html">Pantry</a><a href="/planner.html">Meal planner</a><a href="/shopping.html">Shopping list</a></div>
+</footer>
+<script src="/js/pages/landing.js"></script>
+</body>
+</html>
