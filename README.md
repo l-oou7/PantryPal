@@ -4,11 +4,8 @@
 
 PantryPal is a full-stack web application with a **Java Spring Boot + Spring Data JPA + Spring Security** backend with **MySQL** (or the built-in H2 database for zero-setup local runs) and an **HTML5 / CSS3 / vanilla JavaScript** frontend. The frontend and backend talk only through REST APIs.
 
-It builds on the *Sizzle & Stir: Recipe_OS* OOAD design (Strategy pattern, Observer pattern, SubstitutionEngine, unit normalisation, GRASP roles) and adds what that MVP left out: multi-user authentication, MySQL persistence, the weekly meal planner, automatic shopping lists and scheduled expiry scanning.
+It builds on the Strategy pattern, Observer pattern, SubstitutionEngine, unit normalisation, GRASP roles along with multi-user authentication, MySQL persistence, the weekly meal planner, automatic shopping lists and scheduled expiry scanning.
 
----
-
-## 1. Run it
 
 **Requirements:** JDK 17 or newer and Maven (NetBeans includes Maven). **No database to install.**
 
@@ -212,7 +209,7 @@ All endpoints return JSON. Errors come back as `{ "status", "message", "fieldErr
 
 ---
 
-## 6. Design traceability (to the OOAD document)
+## 6. Design traceability 
 
 | Design element | Implementation |
 |---|---|
